@@ -5,5 +5,15 @@
 </head>
 <body> 
 <p>this message is from html file</p>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+	var sock = io()
+	sock.on('connect',()=>{
+		console.log('user is connected')
+	})
+	sock.on('disconnect',()=>{
+		console.log('disconnected')
+	})
+</script>
 </body>
 </html>
